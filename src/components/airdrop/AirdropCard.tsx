@@ -29,6 +29,7 @@ function AirdropCard({ background = 'bg-custom-orange', onClick, dialog = false,
     if (airdrop.airdropType !== 'merkle') return;
     const claim = MerkleData.claims.find(claim => claim.address.toLowerCase() === address.toLowerCase());
     setAmount(claim?.amount ? ethers.formatUnits(claim?.amount, 18).toString() : '0');
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address])
 
   return (
