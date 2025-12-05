@@ -29,12 +29,14 @@ function ConnectRNSDomainDialog({ closeDialog, open }: props) {
       setIsError(false)
       console.log(domain)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [address, domain])
 
   useEffect(()=> {
     if(isError) {
       setIsError(false)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isError])
 
   const handleSubmit = () => {
@@ -112,7 +114,7 @@ function ConnectRNSDomainDialog({ closeDialog, open }: props) {
               </Button>
             </div>
             <div className='h-full w-full ml-4 text-zinc-300 font-semibold text-xs '>
-              <span>Don't you have your RNS domain yet? Go to  <a
+              <span>{`Don't`} you have your RNS domain yet? Go to  <a
                 href="https://testnet.manager.rns.rifos.org/"
                 target="_blank"
                 rel="noopener noreferrer"

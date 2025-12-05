@@ -24,6 +24,7 @@ const useConnectRNSDomain = () => {
       console.error('Error searching RNS domain', error)
       setIsError(true)
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return {
